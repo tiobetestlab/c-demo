@@ -1,8 +1,6 @@
 name: C/C++ CI
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     types: [ opened, edited, synchronize, reopened ]
 
@@ -23,6 +21,9 @@ jobs:
     - name: make all
       run: make all
     
+    - name: Retrieve TICS Wrappers
+      run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
+    
     - name: TICS Action Run
       uses: ./.github/actions/tics
       env: 
@@ -35,5 +36,5 @@ jobs:
         ticsAuthToken: 'NGUyOTFkMzMtM2ExYS00MDhjLTgzMDktMTVlNjBlYjZmMzM5OnBTWiVNUl5FZmdSLTpwQg'
         clientToken: 'c-demo'
         tmpDir: '\tmp\c-demo'
-        calc: 'BEGIN,CW,END'
+        calc: 'BEGIN,CW,CS,FANOUT,CY,DUP,END'
 
