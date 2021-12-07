@@ -24,8 +24,8 @@ jobs:
     - name: Retrieve TICS Wrappers
       run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
       
-    - name: Check
-      run: ls -la /home/runner/TICSWrapper/jre/bin && ls -la /home/runner/TICSWrapper/BuildServer && TICS -qg -calc CW,CS,FANOUT,CY,DUP -changed -project c-demo -cdtoken c-demo -tmpdir \tmp\c-demo  .
+    - name: TICS without plugin
+      run: export PATH=$PATH;/home/runner/TICSWrapper/BuildServer && TICS=https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab && TICS -calc CW, -changed -project c-demo -cdtoken c-demo .
       
     - name: TICS Action Run
       uses: ./.github/actions/tics
