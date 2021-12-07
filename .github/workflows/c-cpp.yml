@@ -25,14 +25,14 @@ jobs:
       run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
     
     - name: Inspect TICS install
-      run: echo $PATH
+      run: export PATH=$PATH:/home/runner/TICSWrapper && echo $PATH
       
     - name: TICS Action Run
       uses: ./.github/actions/tics
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         TICS: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
-        PATH: $PATH;/home/runner/TICSWrapper
+        PATH: $PATH:/home/runner/TICSWrapper
       with:
         projectName: 'c-demo'
         branchName: 'main'
