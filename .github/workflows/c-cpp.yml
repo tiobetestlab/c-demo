@@ -22,10 +22,9 @@ jobs:
       run: make all
     
     - name: Retrieve TICS Wrappers
-      run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
-    
-    - name: Add to PATH
-      run: echo "/home/runner/TICS/Wrapper/BuildServer" >> $GITHUB_PATH
+      run: | 
+        source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
+        echo "$PATH" >> $GITHUB_PATH
       
     - name: TICS Action Run
       uses: ./.github/actions/tics
