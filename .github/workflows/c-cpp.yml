@@ -23,7 +23,10 @@ jobs:
     
     - name: Retrieve TICS Wrappers
       run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
-      
+    
+    - name: Path check
+      run: echo PATH = $PATH && echo TICS = $TICS
+    
     - name: TICS without plugin
       env: 
         TICS: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
