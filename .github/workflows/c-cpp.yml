@@ -26,18 +26,12 @@ jobs:
     
     - name: Add to PATH
       run: echo "/home/runner/TICSWrapper/BuildServer" >> $GITHUB_PATH
-    
-    - name: TICS without plugin
-      env: 
-        TICS: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-      run: /home/runner/TICSWrapper/BuildServer/TICS -calc CW -changed -project c-demo .
       
     - name: TICS Action Run
       uses: ./.github/actions/tics
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         TICS: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
-        PATH: $PATH:/home/runner/TICSWrapper/BuildServer
       with:
         projectName: 'c-demo'
         branchName: 'main'
