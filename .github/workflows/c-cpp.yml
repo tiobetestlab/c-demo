@@ -22,6 +22,7 @@ jobs:
       run: make all
     
     - name: Retrieve TICS Wrappers
+      shell: bash
       run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
     
     - name: TICS Action Run
