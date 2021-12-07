@@ -29,6 +29,7 @@ jobs:
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         TICS: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
+        PATH: $PATH;/home/runner/TICSWrapper
       with:
         projectName: 'c-demo'
         branchName: 'main'
