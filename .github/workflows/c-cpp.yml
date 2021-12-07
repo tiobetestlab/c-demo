@@ -25,7 +25,8 @@ jobs:
       run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
       
     - name: TICS without plugin
-      env: TICS: "https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab"
+      env: 
+        TICS: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
       run: /home/runner/TICSWrapper/BuildServer/TICS -calc CW -changed -project c-demo -cdtoken c-demo .
       
     - name: TICS Action Run
