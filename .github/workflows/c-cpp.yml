@@ -25,7 +25,7 @@ jobs:
       run: source <(curl -s "https://testlab.tiobe.com/tiobeweb/testlab/api/private/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab&usersettings=false")
       
     - name: Check
-      run: ls -la /home/runner/TICSWrapper/BuildServer
+      run: ls -la /home/runner/TICSWrapper && ls -la /home/runner/TICSWrapper/BuildServer
       
     - name: TICS Action Run
       uses: ./.github/actions/tics
