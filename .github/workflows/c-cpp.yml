@@ -33,6 +33,6 @@ jobs:
         ticsViewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/'
         ticsAuthToken: 'NGUyOTFkMzMtM2ExYS00MDhjLTgzMDktMTVlNjBlYjZmMzM5OnBTWiVNUl5FZmdSLTpwQg'
         clientToken: 'cdemo'
-        tmpDir: '\tmp\c-demo'
+        tmpDir: '\tmp\c-demo -log 9'
         calc: 'CW,CS,FANOUT,CY,DUP'
 
