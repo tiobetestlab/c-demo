@@ -1,6 +1,8 @@
 //#include "std_types.h"
 #include "engine_drte.h"
 
+char stupid = 666;
+
 //TICS -DEADCODE: HW triggered function
 void ICE_NotifyCallSpeed(void){
 }
