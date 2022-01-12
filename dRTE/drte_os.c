@@ -2,6 +2,7 @@
 #include "std_types.h" /* dRTE/../Inc */
 
 static t_drte_event enabledEvents = 0x000000000u;
+static char alsoUnused = 888;
 
 t_drte_runnable Runnable_Notify(void);
 
