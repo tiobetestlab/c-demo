@@ -1,6 +1,8 @@
 //#include "std_types.h"
 #include "engine_drte.h"
 
+char danai = 0;
+
 //TICS -DEADCODE: HW triggered function
 void ICE_NotifyCallSpeed(void){
 }
