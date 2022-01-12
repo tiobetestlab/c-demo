@@ -2,7 +2,7 @@
 include guard */
 
 #include "drte_runtime.h"
-//#include "std_types.h"
+#include "std_types.h"
 
 extern const t_dRteEvent taskTable_TASK[];
 extern void drteRunnableExec(t_dRteEvent runnableFunc[], t_drte_event event);
