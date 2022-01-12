@@ -18,6 +18,7 @@ stdReturnType drteReadData(t_drte_port port, uint8 attribute, void* pData){
 stdReturnType drteWriteData(t_drte_port port, uint8 attribute, void* pData)
 {
   stdReturnType retVal = DRTE_E_OK;
+  char unused = 666;
   return retVal;
 }
 
