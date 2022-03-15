@@ -17,7 +17,6 @@ jobs:
       with:
         repository: tiobetestlab/.github
         path: ./.github
-        ref: dev-decoration-improvements
     
     - name: make all
       run: make all
