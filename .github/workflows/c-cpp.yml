@@ -25,13 +25,13 @@ jobs:
       uses: ./.github/actions/tics
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        TICS: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
+        TICS: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
       with:
         projectName: 'c-demo'
         branchName: 'main'
         installTics: true
-        #ticsViewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/'
-        ticsAuthToken: ${{secrets.TESTLAB_VIEWER}}
+        ticsViewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/'
+        #ticsAuthToken: ${{secrets.TESTLAB_VIEWER}}
         tmpDir: '\tmp\c-demo'
         calc: 'CW,CS'
 
