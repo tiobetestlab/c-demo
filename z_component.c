@@ -48,8 +48,6 @@ int main(int argc, char *argv[])
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
       task();
       
-      task();
-      
       (void)dRTE_Read_Engine_EngineStruct(&EngineStruct);
       
       EngineStruct.engineSpeed = 6666;
