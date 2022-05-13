@@ -31,6 +31,8 @@ jobs:
         projectName: 'c-demo'
         branchName: 'main'
         installTics: true
+        ticsViewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/'
+        ticsAuthToken: ${{secrets.TESTLAB_ANALYZER_TOKEN}}
         tmpDir: '\tmp\c-demo'
         calc: 'CW,CS'
 
