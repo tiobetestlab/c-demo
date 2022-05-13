@@ -42,8 +42,6 @@ int main(int argc, char *argv[])
       /* Execute runnables in task */
       task();
       
-      task();
-      
       EngineTemp_local = 80;
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
       task();
