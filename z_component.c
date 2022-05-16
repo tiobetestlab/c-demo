@@ -1,7 +1,8 @@
 //#include "std_types.h"
 #include "component_drte.h"
 
-#pragma CHECK_MISRA("666") /* Multi -                              Line comment */
+#pragma CHECK_MISRA("666") /* Multi -                              
+Line comment */
 
 //#AAA
 
