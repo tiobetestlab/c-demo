@@ -14,29 +14,21 @@ jobs:
     
     - name: TICS Action Setup
       uses: actions/checkout@v2
-      #with:
-        #repository: tiobetestlab/.github
-        #path: ./.github
       with:
-          repository: tiobetestlab/tics-github-action
+          repository: marvinwener/tics-github-action
           path: ./tics-github-action
     
     - name: make all
       run: make all
     
     - name: TICS Action Run
-      #uses: ./.github/actions/tics
       uses: tiobetestlab/tics-github-action@main
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        #TICS: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         TICSAUTHTOKEN: ${{secrets.TESTLAB_ANALYZER_TOKEN}}
       with:
         projectName: 'c-demo'
-        #branchName: 'main'
         installTics: true
-        #ticsViewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/'
-        #ticsAuthToken: ${{secrets.TESTLAB_ANALYZER_TOKEN}}
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         tmpDir: '\tmp\c-demo'
         calc: 'CW,CS'
