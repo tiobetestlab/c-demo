@@ -25,7 +25,7 @@ jobs:
       uses: marvinwener/tics-github-action@main
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        TICSAUTHTOKEN: ${{secrets.TESTLAB_ANALYZER_TOKEN}}
+        TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
       with:
         projectName: 'c-demo'
         installTics: true
