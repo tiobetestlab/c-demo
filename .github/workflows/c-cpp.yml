@@ -22,7 +22,7 @@ jobs:
       run: make all
     
     - name: TICS Action Run
-      uses: tiobetestlab/tics-github-action@main
+      uses: marvinwener/tics-github-action@main
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         TICSAUTHTOKEN: ${{secrets.TESTLAB_ANALYZER_TOKEN}}
