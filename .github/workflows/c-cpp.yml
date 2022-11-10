@@ -12,6 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
        
+    - name: List Dirs
+      run: tree .
+      
     - name: make all
       run: make all
     
