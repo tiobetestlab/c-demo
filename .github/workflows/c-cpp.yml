@@ -11,13 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: TICS Action Setup
-      uses: actions/checkout@v2
-      with:
-          repository: tiobe/tics-github-action
-          path: ./tics-github-action
-    
+       
     - name: make all
       run: make all
     
