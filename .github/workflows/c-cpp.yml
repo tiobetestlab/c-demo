@@ -15,14 +15,14 @@ jobs:
     - name: TICS Action Setup
       uses: actions/checkout@v2
       with:
-          repository: marvinwener/tics-github-action
+          repository: tiobe/tics-github-action
           path: ./tics-github-action
     
     - name: make all
       run: make all
     
     - name: TICS Action Run
-      uses: marvinwener/tics-github-action@main
+      uses: tiobe/tics-github-action@tiobe-patch-PR31241
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
