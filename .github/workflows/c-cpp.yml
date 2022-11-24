@@ -1,32 +1,25 @@
 name: C/C++ CI
 
-on:
-  pull_request:
-    types: [ opened, edited, synchronize, reopened ]
+on: [pull_request]
 
 jobs:
-  build:
-
+  TiCS:
+    name: TiCS
     runs-on: self-hosted
-
     steps:
-    - uses: actions/checkout@v2
-       
-    - name: List Dirs
-      run: echo $PWD && tree .
-      
-    - name: make all
-      run: make all
-    
-    - name: TICS Action Run
-      uses: tiobe/tics-github-action@tiobe-patch-PR31241
-      env: 
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
-      with:
-        projectName: 'c-demo'
-        installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-        tmpDir: '/tmp/c-demo'
-        calc: 'CW,CS'
-
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Make
+        run: make all
+      - name: TICS Action Run
+        uses: tiobe/tics-github-action@annotations
+        env: 
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          TICSAUTHTOKEN: ${{secrets.TICSAUTHTOKEN}}
+        with:
+          projectName: 'c-demo'
+          installTics: true
+          ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
+          tmpDir: '/tmp/c-demo'
+          calc: 'CW,CS'
+          showAnnotations: true
