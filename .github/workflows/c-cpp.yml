@@ -15,8 +15,8 @@ jobs:
     - name: List Dirs
       run: echo $PWD && tree .
       
-    - name: make all
-      run: make all
+    #- name: make all
+    #  run: make all
     
     - name: TICS Action Run
       uses: tiobe/tics-github-action@tiobe-patch-PR31241
