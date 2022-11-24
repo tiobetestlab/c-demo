@@ -5,10 +5,9 @@ on:
     types: [ opened, edited, synchronize, reopened ]
 
 jobs:
-  build:
-
+  TiCS:
+    name: TiCS
     runs-on: self-hosted
-
     steps:
     - name: Checkout
       uses: actions/checkout@v2     
