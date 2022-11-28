@@ -36,7 +36,7 @@ jobs:
         #branchName: 'main'
         installTics: true
         #ticsViewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/'
-        #ticsAuthToken: ${{secrets.TESTLAB_ANALYZER_TOKEN}}
+        ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         tmpDir: '\tmp\c-demo'
         calc: 'CW,CS'
