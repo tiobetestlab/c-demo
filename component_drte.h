@@ -3,7 +3,7 @@
 
 #include "drte_runtime.h"
 
-/* Receiver ports */
+/* Receiver ports macros */
 #define dRTE_Read_Engine_EngineSpeed_uint16(var)  drteReadData(Engine, attr_EngineSpeed,  var);
 #define dRTE_Read_Engine_EngineTemp_uint8(var)    drteReadData(Engine, attr_EngineTemp,   var);
 #define dRTE_Read_Engine_EngineStruct(var)        drteReadData(Engine, attr_EngineStruct, var);
