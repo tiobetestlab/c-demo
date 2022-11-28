@@ -5,39 +5,23 @@ on:
     types: [ opened, edited, synchronize, reopened ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  TiCS:
+    name: TiCS
+    runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v2
-    
-    - name: TICS Action Setup
-      uses: actions/checkout@v2
-      #with:
-        #repository: tiobetestlab/.github
-        #path: ./.github
-      with:
-          repository: tiobetestlab/tics-github-action
-          path: ./tics-github-action
-    
+    - name: Checkout
+      uses: actions/checkout@v2     
     - name: make all
       run: make all
-    
     - name: TICS Action Run
-      #uses: ./.github/actions/tics
-      uses: tiobetestlab/tics-github-action@main
+      uses: tiobe/tics-github-action@tiobe-patch-PR31241
+      #uses: tiobe/tics-github-action@annotations
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        #TICS: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-        TICSAUTHTOKEN: ${{secrets.TESTLAB_ANALYZER_TOKEN}}
+        TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
       with:
         projectName: 'c-demo'
-        #branchName: 'main'
         installTics: true
-        #ticsViewerUrl: 'https://testlab.tiobe.com/tiobeweb/testlab/'
-        ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-        tmpDir: '\tmp\c-demo'
+        tmpDir: '/tmp/c-demo'
         calc: 'CW,CS'
-
