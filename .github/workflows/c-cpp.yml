@@ -7,7 +7,7 @@ on:
 jobs:
   TiCS:
     name: TiCS
-    runs-on: self-hosted
+    runs-on: [self-hosted, centos8]
     steps:
     - name: Checkout
       uses: actions/checkout@v2     
