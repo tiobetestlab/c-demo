@@ -18,7 +18,6 @@ jobs:
       env: 
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
-        ACTIONS_STEP_DEBUG: true
       with:
         projectName: auto
         installTics: true
@@ -26,3 +25,4 @@ jobs:
         tmpDir: '/tmp/c-demo'
         calc: 'CW,CS'
         debug: debug
+        ACTIONS_STEP_DEBUG: true
