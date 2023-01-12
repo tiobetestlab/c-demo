@@ -27,3 +27,5 @@ jobs:
         calc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
+        hostnameVerification: false
+        logLevel: debug
