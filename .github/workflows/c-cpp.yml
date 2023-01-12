@@ -7,7 +7,7 @@ on:
 jobs:
   TiCS:
     name: TiCS
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2     
