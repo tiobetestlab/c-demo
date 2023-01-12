@@ -2,6 +2,7 @@
 #define MODULE_DRTE_H_
 
 #include "drte_runtime.h"
+/* change */
 
 /* Receiver ports */
 #define dRTE_Read_Engine_EngineSpeed_uint16(var)  drteReadData(Engine, attr_EngineSpeed,  var);
