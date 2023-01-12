@@ -22,6 +22,6 @@ jobs:
         tmpDir: '/tmp/c-demo'
         calc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        #ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
+        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         hostnameVerification: 0
         logLevel: debug
