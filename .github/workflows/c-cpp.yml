@@ -15,10 +15,6 @@ jobs:
       run: make all
     - name: TICS Action Run
       uses: tiobe/tics-github-action@version-2.0
-      #uses: tiobe/tics-github-action@annotations
-      #env: 
-      #  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      #  TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
       with:
         projectName: 'auto'
         installTics: true
@@ -26,4 +22,6 @@ jobs:
         tmpDir: '/tmp/c-demo'
         calc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
+        #ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
+        hostnameVerification: 0
+        logLevel: debug
