@@ -14,14 +14,16 @@ jobs:
     - name: make all
       run: make all
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@tiobe-patch-PR31241
+      uses: tiobe/tics-github-action@version-2.0
       #uses: tiobe/tics-github-action@annotations
-      env: 
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
+      #env: 
+      #  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #  TICSAUTHTOKEN: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
       with:
         projectName: 'auto'
         installTics: true
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         tmpDir: '/tmp/c-demo'
         calc: 'CW,CS'
+        githubToken: ${{secrets.GITHUB_TOKEN}}
+        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
