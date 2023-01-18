@@ -16,3 +16,5 @@ void ICE_KL50Change_Callback(void){
 
 void MMI_KL15Change_Callback(void){
 }
+
+KRAK;
