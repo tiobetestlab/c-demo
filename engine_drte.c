@@ -6,7 +6,8 @@ void ICE_NotifyCallSpeed(void){
 }
 
 void ICE_NotifyCallTemp(void){
-   int x++;
+   int x;
+   x = x + x++;
 }
 
 void ICE_KL15Change_Callback(void){
