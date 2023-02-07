@@ -12,7 +12,7 @@ jobs:
       - name: Make
         run: make all
       - name: TICS Action Run
-        uses: tiobe/tics-github-action@annotations
+        uses: tiobe/tics-github-action@flags-warning-bug
         env: 
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           TICSAUTHTOKEN: ${{secrets.TICSAUTHTOKEN}}
