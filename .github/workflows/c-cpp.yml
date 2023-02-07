@@ -14,8 +14,8 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@flags-warning-bug
       with:
-        projectName: 'auto'
         installTics: true
+        projectName: 'auto'
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         tmpDir: '/tmp/c-demo'
         calc: 'CW,CS'
