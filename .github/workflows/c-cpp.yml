@@ -24,3 +24,4 @@ jobs:
         hostnameVerification: 0
         extendTics: '-codetype production'
         logLevel: debug
+        additionalFlags: -log 9
