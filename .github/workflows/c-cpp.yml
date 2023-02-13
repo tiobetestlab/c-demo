@@ -16,7 +16,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@844b1a23f9d5c9629e69ebc9f321c2a28ce54684
+      uses: tiobe/tics-github-action@31768-Non-invasive-debug-enabling
       with:
         projectName: 'auto'
         installTics: true
@@ -25,3 +25,9 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         additionalFlags: -codetype PRODUCTION
+        tmpDir: /tmp/tmpdir
+    - name: Archive TmpDir
+      uses: actions/upload-artifact@v3
+      with:
+        name: tmpdir
+        path: /tmp/tmpdir
