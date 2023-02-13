@@ -32,8 +32,3 @@ jobs:
       with:
         name: c-demo-tmp
         path: /tmp/c-demo-tmp
-    - name: Download tmpdir
-      uses: actions/download-artifact@v3
-      with:
-        name: c-demo-tmp
-        path: /tmp/c-demo-tmp
