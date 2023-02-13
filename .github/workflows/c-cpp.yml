@@ -17,6 +17,8 @@ jobs:
       run: printenv
     - name: TICS Action Run
       uses: tiobe/tics-github-action@31768-Non-invasive-debug-enabling
+      env:
+        RUNNER_DEBUG: 0
       with:
         projectName: 'auto'
         installTics: true
