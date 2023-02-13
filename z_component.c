@@ -19,6 +19,9 @@ int main(int argc, char *argv[])
   uint8    retVal[5];
   _BOOL     commitSuicide = FALSE;
   
+  // printf() displays the string inside quotation
+  printf("Hello, World!");
+  
   while(!commitSuicide){
       
       /* Execute runnables in task */
