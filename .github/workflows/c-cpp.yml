@@ -13,8 +13,8 @@ jobs:
       uses: actions/checkout@v2     
     - name: make all
       run: make all
-    - name: Archive tmpdir
-      uses: actions/upload-artifact@v3
+    - name: Download tmpdir
+      uses: actions/download-artifact@v3
       with:
         name: c-demo-tmp
         path: /tmp/c-demo-tmp
