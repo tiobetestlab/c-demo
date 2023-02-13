@@ -26,5 +26,6 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         hostnameVerification: 0
-        extendTics: '-codetype production'
+        additionalFlags: '-codetype production'
+        excludeMovedFiles: true
         logLevel: debug
