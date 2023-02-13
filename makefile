@@ -42,8 +42,8 @@ drte_runtime.o: dRTE/drte_runtime.c
 drte_os.o: dRTE/drte_os.c
 	$(CC) $(CFLAGS) dRTE/drte_os.c -o dRTE/drte_os.o
 
-os.o: os.c
-	$(CC) $(CFLAGS) os.c -o os.o
+opsys.o: opsys.c
+	$(CC) $(CFLAGS) opsys.c -o opsys.o
 
 engine_drte.o: engine_drte.c
 	$(CC) $(CFLAGS) engine_drte.c -o engine_drte.o
