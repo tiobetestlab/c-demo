@@ -25,17 +25,17 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         additionalFlags: -codetype PRODUCTION
-        tmpDir: /tmp/tmpdir
+        tmpDir: /tmp/debug_tics/tmpdir
     
     - name: Zip TmpDir
       if: ${{ always() }}
       uses: montudor/action-zip@v1
       with:
-        args: zip -qq -r tmpdir.zip /tmp/tmpdir/
+        args: zip -qq -r /tmp/debug_tics/tmpdir.zip /tmp/debug_tics/tmpdir
      
     - name: Archive TmpDir
       if: ${{ always() }}
       uses: actions/upload-artifact@v3
       with:
         name: tmpdir
-        path: tmpdir.zip
+        path: /tmp/debug_tics/tmpdir.zip
