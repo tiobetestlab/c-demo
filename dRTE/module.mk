@@ -5,5 +5,5 @@ DRTE_INC = ;.\62_dRTE
 DRTE_SRC = \
 	dRTE/drte \
 	dRTE/drte_runtime \
-	dRTE/drte_os
+	dRTE/drte_ops
 
