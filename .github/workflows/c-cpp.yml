@@ -27,8 +27,8 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         logLevel: debug
-    - name: Download tmpdir
-      uses: actions/download-artifact@v3
+    - name: Upload tmpdir
+      uses: actions/upload-artifact@v3
       with:
         name: c-demo-tmp
         path: /tmp/c-demo-tmp
