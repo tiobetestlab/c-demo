@@ -13,11 +13,6 @@ jobs:
       uses: actions/checkout@v2     
     - name: make all
       run: make all
-    - name: Download tmpdir
-      uses: actions/download-artifact@v3
-      with:
-        name: c-demo-tmp
-        path: /tmp/c-demo-tmp
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
@@ -31,3 +26,8 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         logLevel: debug
+    - name: Download tmpdir
+      uses: actions/download-artifact@v3
+      with:
+        name: c-demo-tmp
+        path: /tmp/c-demo-tmp
