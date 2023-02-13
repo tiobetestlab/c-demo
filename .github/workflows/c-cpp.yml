@@ -16,7 +16,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@31347-toggle_test_code
+      uses: tiobe/tics-github-action@version-2.0
       with:
         projectName: 'auto'
         installTics: true
