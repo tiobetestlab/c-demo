@@ -27,7 +27,8 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         logLevel: debug
-    - name: Upload tmpdir
+    - name: Archive tmpdir
+      if: ${{ always() }}
       uses: actions/upload-artifact@v3
       with:
         name: c-demo-tmp
