@@ -21,6 +21,12 @@ int main(int argc, char *argv[])
   
   // printf() displays the string inside quotation
   printf("Hello, World!");
+  // TODO: don't comment out todo's
+  // while(!commitsuicide){
+  //   task();
+  // }
+  // Don't comment out code
+  
   
   while(!commitSuicide){
       
