@@ -10,7 +10,7 @@ PROJECT_INC = .\ $(DRTE_INC) $(GEN_INC)
 CC      = gcc
 OBJECTS = $(foreach file,$(PROJECT_SRC),$(addsuffix .o,$(file)))
 
-OBJ     = engine_drte.o os.o z_component.o test_component.o $(OBJECTS) 
+OBJ     = engine_drte.o opsys.o z_component.o test_component.o $(OBJECTS) 
 INCS    =  -I"./dRTE" -I"./Inc"
 BIN     = dRTE_Demo
 CFLAGS  = -c $(INCS)
