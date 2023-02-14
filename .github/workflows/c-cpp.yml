@@ -16,7 +16,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@31347-toggle_test_code
+      uses: tiobe/tics-github-action@31774-mandatory_review
       with:
         projectName: 'auto'
         installTics: true
@@ -25,4 +25,4 @@ jobs:
         recalc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
-        logLevel: debug
+        pullRequestApproval: false
