@@ -24,5 +24,5 @@ jobs:
         tmpDir: '/tmp/c-demo'
         recalc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: 'MzY4MWQ2MmQtYmY1Yy00M2RmLWExNjEtZWRjYTFjMjQ0ZDcwOjA4NERrU0IjaGBhW2tgPA'
+        ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         pullRequestApproval: false
