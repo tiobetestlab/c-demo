@@ -22,7 +22,7 @@ jobs:
         installTics: true
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab2/api/cfg?name=default'
         tmpDir: '/tmp/c-demo'
-        calc: 'CW,CS'
+        recalc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'MzY4MWQ2MmQtYmY1Yy00M2RmLWExNjEtZWRjYTFjMjQ0ZDcwOjA4NERrU0IjaGBhW2tgPA'
         pullRequestApproval: false
