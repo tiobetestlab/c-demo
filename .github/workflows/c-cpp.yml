@@ -20,7 +20,7 @@ jobs:
       with:
         projectName: 'auto'
         installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb2/testlab/api/cfg?name=default'
+        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab2/api/cfg?name=default'
         tmpDir: '/tmp/c-demo'
         calc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
