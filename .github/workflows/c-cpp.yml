@@ -11,10 +11,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2     
-    - name: make all
-      run: make all
-    - name: dump env settings
-      run: printenv
+    #- name: make all
+    #  run: make all
+    #- name: dump env settings
+    #  run: printenv
     - name: TICS Action Run
       uses: tiobe/tics-github-action@v2
       with:
