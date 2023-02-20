@@ -5,6 +5,6 @@
 
 int fake_main(int argc, char *argv[])
 {
-    return 0;
+    return 1000;
 }
 
