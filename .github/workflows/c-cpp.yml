@@ -7,7 +7,7 @@ on:
 jobs:
   TiCS:
     name: TiCS
-    runs-on: Windows
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2     
@@ -28,4 +28,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         pullRequestApproval: false
-        secretsFilter: TICS
+        secretsFilter: ',,'
