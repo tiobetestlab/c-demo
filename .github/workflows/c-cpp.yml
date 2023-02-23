@@ -30,3 +30,4 @@ jobs:
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
         secretsFilter: 'THE_THING_THAT_SHOULD_NOT_BE, THE_THINGTHATSHOULDNOTBE'
+        mode: diagnostic
