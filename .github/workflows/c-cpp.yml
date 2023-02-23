@@ -16,7 +16,9 @@ jobs:
     #- name: dump env settings
     #  run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@31834-mask_sensitive_env
+      env: 
+        THE_THING_THAT_SHOULD_NOT_BE: 'If you can see this, it is bad'
       with:
         projectName: 'auto'
         installTics: true
@@ -26,3 +28,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         pullRequestApproval: false
+        secretsFilter: THE_THING
