@@ -16,7 +16,7 @@ jobs:
     #- name: dump env settings
     #  run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@31833-diagnostic_mode
       env: 
         THE_THING_THAT_SHOULD_NOT_BE: 'If-you-can-see-this-it-is-bad'
         THE_THINGTHATSHOULDNOTBE: 'If-you-can-see-this-it-is-bad'
