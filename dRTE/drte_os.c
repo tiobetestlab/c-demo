@@ -8,6 +8,7 @@ t_drte_runnable Runnable_Notify(void);
 /* task table */
 const t_dRteEvent taskTable_TASK[]=
 {
+    // stuff
     {Runnable_Notify, EVENT_KL15}
 };
 
