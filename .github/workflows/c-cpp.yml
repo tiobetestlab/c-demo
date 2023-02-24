@@ -1,8 +1,6 @@
 name: C/C++ CI
 
-on:
-  pull_request:
-    types: [ opened, edited, synchronize, reopened ]
+on: [pull_request, push]
 
 jobs:
   TiCS:
@@ -16,7 +14,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@31833-diagnostic_mode
       with:
         projectName: 'auto'
         installTics: true
@@ -26,3 +24,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         pullRequestApproval: false
+        mode: diagnostic
