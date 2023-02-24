@@ -27,4 +27,3 @@ jobs:
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         hostnameVerification: 0
         excludeMovedFiles: true
-        logLevel: debug
