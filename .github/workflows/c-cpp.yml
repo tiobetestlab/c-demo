@@ -1,6 +1,6 @@
 name: C/C++ CI
 
-on: [pull_request, push]
+on: [pull_request]
 
 jobs:
   TiCS:
@@ -24,4 +24,3 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
         pullRequestApproval: false
-        mode: diagnostic
