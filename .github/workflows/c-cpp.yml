@@ -24,6 +24,7 @@ jobs:
         tmpDir: '/tmp/c-demo-tmp'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
+        TICSHOSTNAMEVERIFICATION: 0
         logLevel: debug
         pullRequestApproval: false
     - name: Archive tmpdir
