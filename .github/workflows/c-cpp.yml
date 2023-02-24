@@ -16,16 +16,14 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@31774-mandatory_review
+      uses: tiobe/tics-github-action@version-2.0
       with:
         projectName: 'auto'
         installTics: true
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         tmpDir: '/tmp/c-demo-tmp'
-        #recalc: 'LOC,CW,CS'
-        #codetype: EXTERNAL
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
+        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         logLevel: debug
         pullRequestApproval: false
     - name: Archive tmpdir
