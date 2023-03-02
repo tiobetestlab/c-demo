@@ -14,7 +14,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@31833-diagnostic_mode
+      uses: tiobe/tics-github-action@31886-too_many_analyzed_files
       with:
         projectName: 'auto'
         installTics: true
