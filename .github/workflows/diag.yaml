@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: TICS Diagnostic
-      uses: tiobe/tics-github-action@31833-diagnostic_mode
+      uses: tiobe/tics-github-action@v2
       with:
         projectName: 'auto'
         installTics: true
