@@ -18,7 +18,7 @@ stdReturnType SetEvent(uint8 task, t_drte_event event)
 	enabledEvents |= event;
 	//printf("\nSET_EVENT: %d | %d\n", enabledEvents, event);
 
-	return 1;
+	return 777;
 }
 
 stdReturnType ClrEvent(uint8 task, t_drte_event event)
