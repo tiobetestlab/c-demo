@@ -14,7 +14,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@31886-too_many_analyzed_files
+      uses: tiobe/tics-github-action@31898-changed_files_error
       with:
         projectName: 'auto'
         installTics: true
