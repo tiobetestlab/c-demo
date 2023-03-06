@@ -2,6 +2,8 @@
 
 extern const t_drte_container drte_container[];
 
+uint8 RTE_STATE_RUN = 0;
+
 stdReturnType drteReadData(t_drte_port port, uint8 attribute, void* pData){
 
      stdReturnType retVal;
