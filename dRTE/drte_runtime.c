@@ -31,8 +31,8 @@ static stdReturnType rteCallActions(t_drte_port port, uint8 attribute)
   retVal = DRTE_E_OK;
 
   /* API only available in run state */
-  //if (RTE_STATE_RUN == currentState)
-  //{
+  if (RTE_STATE_RUN == currentState)
+  {
       /* get actions for 1..n receiver */
       for (index = 0; index < drte_container[port].numActions; index++){
           
@@ -53,7 +53,7 @@ static stdReturnType rteCallActions(t_drte_port port, uint8 attribute)
                    break;
           } /* end Switch */
         } /* end for */
-  //} /* end if(RTE_STATE_RUN == currentState) */
+  } /* end if(RTE_STATE_RUN == currentState) */
 
   return retVal;
 }
