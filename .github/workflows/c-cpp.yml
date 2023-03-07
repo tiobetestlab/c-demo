@@ -14,7 +14,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@31898-changed_files_error
+      uses: tiobe/tics-github-action@main
       with:
         projectName: 'auto'
         installTics: true
