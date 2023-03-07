@@ -3,6 +3,7 @@
 
 //TICS -DEADCODE: HW triggered function
 void ICE_NotifyCallSpeed(void){
+  // no comment
 }
 
 void ICE_NotifyCallTemp(void){
