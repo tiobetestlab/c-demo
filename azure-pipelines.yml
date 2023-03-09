@@ -12,6 +12,8 @@ pool:
 variables:
 - name: TICSINSTALLDIR
   value: /var/tmp/TICS
+- name: TICS
+  value: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
 - name: TICSAUTHTOKEN
   value: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
 
@@ -27,7 +29,7 @@ steps:
 - task: TICS@0
   inputs:
     wrapperlocation: "${{ variables.TICSINSTALLDIR }}/BuildServer"
-    ticscfg: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
+    ticscfg: ${{ TICS }}}}
     project: 'c-demo'
     branchname: 'main'
     extraargs: -calc GATE
