@@ -28,7 +28,7 @@ steps:
 
 - task: TICS@0
   inputs:
-    wrapperlocation: "${{ variables.TICSINSTALLDIR }}/BuildServer"
+    wrapperlocation: ${{ variables.TICSINSTALLDIR}}/BuildServer
     ticscfg: ${{ variables.TICS }}}}
     project: 'c-demo'
     branchname: 'main'
