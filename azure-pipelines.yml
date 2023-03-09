@@ -32,7 +32,7 @@ steps:
     ticscfg: ${{ variables.TICS }}
     project: 'c-demo'
     branchname: 'main'
-    extraargs: -calc GATE
+    extraargs: -calc BEGIN,CS,CW,END
 
 - task: ticsqualitygate@0
   inputs:
