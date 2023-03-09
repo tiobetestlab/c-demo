@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
   uint8    EngineTemp_local  = 90;
   uint8    KL15_local        = 1;
   uint8    KL50_local        = 1;
+  uint8    x=300;
   uint8    retVal[5];
   _BOOL     commitSuicide = FALSE;
   
