@@ -9,6 +9,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- name: TICSINSTALLDIR
+  value: /var/tmp/TICS
+- name: TICSAUTHTOKEN
+  value: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
+
 steps:
 - script: |
     make
@@ -20,6 +26,7 @@ steps:
 
 - task: TICS@0
   inputs:
+    wrapperlocation: ${{ variables.TICSINSTALLDIR }}
     ticscfg: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
     project: 'c-demo'
     branchname: 'main'
