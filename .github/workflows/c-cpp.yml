@@ -14,9 +14,10 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@31735-decoration_report
       with:
-        projectName: 'auto'
+        projectName: c-demo
+        branchName: main
         installTics: true
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         tmpDir: '/tmp/c-demo'
