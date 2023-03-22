@@ -6,6 +6,8 @@ jobs:
   TiCS:
     name: TiCS
     runs-on: ubuntu-latest
+    env:
+      TICSIDE: github
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
