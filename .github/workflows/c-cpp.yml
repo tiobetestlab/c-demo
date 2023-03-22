@@ -9,20 +9,17 @@ jobs:
     env:
       TICSIDE: github
     steps:
-    - name: Checkout
+    - name: Get Code
       uses: actions/checkout@v3    
-    - name: make all
+    - name: Build Code
       run: make all
-    - name: dump env settings
-      run: printenv
-    - name: TICS Action Run
+    - name: Analyze Code (TICS)
       uses: tiobe/tics-github-action@v2
       with:
-        projectName: 'auto'
+        projectName: auto
         installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-        tmpDir: '/tmp/c-demo'
-        recalc: 'CW,CS'
+        ticsConfiguration: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
+        recalc: CW,CS
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
