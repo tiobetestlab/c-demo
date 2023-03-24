@@ -24,7 +24,9 @@ stdReturnType drteWriteData(t_drte_port port, uint8 attribute, void* pData)
 
 static stdReturnType rteCallActions(t_drte_port port, uint8 attribute)
 {
-  uint8               index = 666;
+  //TODO: blabla
+  //for (pActino->actionType){
+  uint8               index = 6667;
   stdReturnType       retVal;
   t_drte_action const* pAction;
 
