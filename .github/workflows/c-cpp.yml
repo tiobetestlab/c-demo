@@ -12,7 +12,7 @@ jobs:
     - name: make all
       run: make all
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@31920-403_forbidden
       with:
         projectName: 'c-demo'
         installTics: true
