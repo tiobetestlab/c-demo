@@ -16,7 +16,7 @@ jobs:
       with:
         projectName: 'c-demo'
         installTics: true
-        ticsConfiguration: 'http://127.0.0.1:888/api/cfg?name=testlab_windows'
+        ticsConfiguration: 'http://127.0.0.1:888/experience/api/cfg?name=testlab_windows'
         tmpDir: 'C:/tmps/c-demo'
         recalc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
