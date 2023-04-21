@@ -18,7 +18,7 @@ typedef void*          t_drte_data;
   #define NULL           0
 #endif
 
-#define TRUE           1==1
+#define TRUE           1
 #define FALSE          !TRUE
 
 #endif
