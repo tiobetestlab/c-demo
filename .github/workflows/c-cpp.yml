@@ -23,4 +23,4 @@ jobs:
         recalc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
-        pullRequestApproval: false
+        pullRequestApproval: true
