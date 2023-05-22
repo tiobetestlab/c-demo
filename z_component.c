@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
                                  77  /* EngineTemp  */
                                };
   uint16   EngineSpeed_local = 888;
-  uint8    EngineTemp_local  = 90;
+  uint8    EngineTemp_local  = 900;
   uint8    KL15_local        = 1;
   uint8    KL50_local        = 1;
   uint8    retVal[5];
