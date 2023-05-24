@@ -1,0 +1,39 @@
+# C/C++ with GCC
+# Build your C/C++ project with GCC using make.
+# Add steps that publish test results, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/c-cpp/gcc
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+- name: TICSINSTALLDIR
+  value: /var/tmp/TICS
+- name: TICS
+  value: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
+- name: TICSAUTHTOKEN
+  value: NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA
+
+steps:
+- script: |
+    make
+  displayName: 'make'
+
+- task: CmdLine@2
+  inputs:
+    script: '. <(curl --silent --show-error "https://testlab.tiobe.com/tiobeweb/testlab/api/public/v1/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab/")'
+
+- task: TICS@0
+  inputs:
+    wrapperlocation: ${{ variables.TICSINSTALLDIR}}/BuildServer
+    ticscfg: ${{ variables.TICS }}
+    project: 'c-demo'
+    branchname: 'main'
+    extraargs: -calc BEGIN,CS,CW,END
+
+- task: ticsqualitygate@0
+  inputs:
+    TICSQualityGateService: 'Testlab Viewer'
