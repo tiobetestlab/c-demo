@@ -5,7 +5,7 @@
 
 int fake_main(int argc, char *argv[])
 {
-    uint8 retval = 666;
+    uint16 retval = 666;
     return retval;
 }
 
