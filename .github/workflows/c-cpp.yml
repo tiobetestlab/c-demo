@@ -14,12 +14,12 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@main
+      uses: tiobe/tics-github-action@31808-repace_post
       with:
-        projectName: 'auto'
+        projectName: 'c-demo'
         installTics: true
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         tmpDir: '/tmp/c-demo'
         recalc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: 'NWM1NmJjNmItNmRhNi00ZmExLTk2Y2YtZmEwMzZlYzNlMDE2OlNRcCwmT0dOY0BXdjU5PA'
+        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
