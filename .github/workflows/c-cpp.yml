@@ -25,4 +25,4 @@ jobs:
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
         postAnnotations: true
-        postToConversation: false
+        postToConversation: true
