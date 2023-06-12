@@ -24,4 +24,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
-        postAnnotations: false
+        postAnnotations: true
