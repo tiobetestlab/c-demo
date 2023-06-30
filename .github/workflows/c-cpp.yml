@@ -16,12 +16,13 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@v2
       with:
-        projectName: c-demo
+        projectName: auto
         installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-        tmpDir: '/tmp/c-demo'
-        calc: 'GATE'
+        ticsConfiguration: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
+        tmpDir: /tmp/c-demo
+        calc: GATE
+        recalc: CW
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
-        postAnnotations: true
+        postAnnotations: false
