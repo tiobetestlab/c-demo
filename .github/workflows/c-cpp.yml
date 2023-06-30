@@ -23,6 +23,6 @@ jobs:
         calc: GATE
         recalc: CW
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
+        #ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
         postAnnotations: false
