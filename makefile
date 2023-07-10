@@ -9,23 +9,29 @@ PROJECT_INC = .\ $(DRTE_INC) $(GEN_INC)
 
 CC      = gcc
 OBJECTS = $(foreach file,$(PROJECT_SRC),$(addsuffix .o,$(file)))
+OBJECTSWIN = $(subst /,\,$(OBJECTS))
 
-OBJ     = engine_drte.o os.o z_component.o test_component.o $(OBJECTS) 
+OBJ     = engine_drte.o os.o z_component.o test_component.o $(OBJECTS)
+OBJWIN  = engine_drte.o os.o z_component.o test_component.o $(OBJECTSWIN)
 INCS    =  -I"./dRTE" -I"./Inc"
 BIN     = dRTE_Demo
+BINWIN     = dRTE_Demo.exe
 CFLAGS  = -c $(INCS)
 LFLAGS  =
 TFLAGS  = -Wall -fprofile-arcs -ftest-coverage
-RM      = rm -f
+RM      = rm-f
+RMWIN   = del
 
 
 .PHONY: all all-before all-after clean clean-custom
 
 all: all-before dRTE_Demo all-after
 
+#clean: clean-custom
+#	${RM} $(OBJ) $(BIN)
 
 clean: clean-custom
-	${RM} $(OBJ) $(BIN)
+	${RMWIN} $(OBJWIN) $(BINWIN)
 
 $(BIN): $(OBJ)
 	$(CC) $(OBJ) -o "dRTE_Demo"
