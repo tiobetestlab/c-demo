@@ -18,7 +18,7 @@ jobs:
       with:
         codetype: PRODUCTION, TESTCODE
         hostnameverification: 1
-        tmpDir: C:\tmp\
+        tmpDir: C:\tmp\TICS
         projectName: c-demo
         installTics: true
         recalc: CY
