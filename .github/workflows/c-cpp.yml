@@ -16,7 +16,6 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@32363-outside_pull_request
       with:
-        codetype: PRODUCTION
         tmpDir: C:/Users/User/AppData/Roaming/tics2
         projectName: c-demo
         installTics: true
