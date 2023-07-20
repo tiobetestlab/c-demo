@@ -16,10 +16,14 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@32363-outside_pull_request
       with:
-        mode: diagnostic
+        codetype: PRODUCTION, TESTCODE
+        hostnameverification: 1
         tmpDir: C:\tmp\
         projectName: c-demo
         installTics: true
+        recalc: CY
         ticsConfiguration: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
+        postAnnotations: true
+        postToConversation: true
