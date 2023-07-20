@@ -5,20 +5,23 @@ on: [pull_request]
 jobs:
   TiCS:
     name: TiCS
-    runs-on: winrunner
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: make all
       run: make all
+    - name: dump env settings
+      run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@31920-403_forbidden
+      uses: tiobe/tics-github-action@v2
       with:
-        projectName: 'c-demo'
+        projectName: c-demo
         installTics: true
-        ticsConfiguration: 'http://127.0.0.1:888/experience/api/cfg?name=testlab_windows'
-        tmpDir: 'C:/tmps/c-demo'
-        recalc: 'CW,CS'
+        ticsConfiguration: 'https://192.168.1.11:20235/tiobeweb/TICS/api/cfg?name=default'
+        tmpDir: '/tmp/c-demo'
+        calc: 'GATE'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
+        postAnnotations: true
