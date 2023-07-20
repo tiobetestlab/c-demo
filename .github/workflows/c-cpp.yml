@@ -23,5 +23,5 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
-        postToConversation: true
+        postToConversation: false
         filelist: filelister.txt
