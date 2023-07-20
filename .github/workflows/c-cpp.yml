@@ -18,7 +18,7 @@ jobs:
       with:
         projectName: c-demo
         installTics: true
-        ticsConfiguration: 'https://192.168.1.11:20235/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:20235/tiobeweb/TICS/api/cfg?name=default'
         tmpDir: '/tmp/c-demo'
         calc: 'GATE'
         githubToken: ${{secrets.GITHUB_TOKEN}}
