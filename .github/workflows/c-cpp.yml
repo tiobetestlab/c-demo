@@ -24,3 +24,5 @@ jobs:
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
         postToConversation: true
+        filelist: filelister.txt
+        
