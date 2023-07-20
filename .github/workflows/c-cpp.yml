@@ -1,6 +1,6 @@
 name: TiCS
 
-on: [issue_comment]
+on: push
 
 jobs:
   TiCS:
