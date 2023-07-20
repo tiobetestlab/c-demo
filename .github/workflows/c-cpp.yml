@@ -1,6 +1,6 @@
 name: TiCS
 
-on: [push]
+on: [issue_comment]
 
 jobs:
   TiCS:
@@ -24,4 +24,3 @@ jobs:
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
         postToConversation: false
-        filelist: filelister.txt
