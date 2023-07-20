@@ -23,5 +23,6 @@ jobs:
         ticsConfiguration: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
-        postAnnotations: false
-        postToConversation: false
+        postAnnotations: true
+        postToConversation: true
+        filelist: c-demo/filelister.txt
