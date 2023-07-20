@@ -23,4 +23,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
-        postToConversation: false
+        postToConversation: true
