@@ -18,7 +18,7 @@ jobs:
       with:
         codetype: TESTCODE
         hostnameverification: 1
-        tmpDir: C:/Users/User/AppData/Roaming/tics
+        tmpDir: C:/Users/User/AppData/Roaming/tics2
         projectName: c-demo
         installTics: true
         calc: DUP
