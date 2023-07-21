@@ -1,6 +1,6 @@
 name: TiCS
 
-on: pull-request
+on: [pull-request]
 
 jobs:
   TiCS:
