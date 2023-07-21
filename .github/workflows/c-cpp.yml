@@ -24,3 +24,4 @@ jobs:
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
         postToConversation: false
+        filelist: .
