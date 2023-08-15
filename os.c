@@ -17,4 +17,11 @@ void task(void)
      DRTE_CLR_EVENT(task, event);
 
      drteRunnableExec(taskTable_TASK, event);
+
+#if 0
+     if (status > 0) {
+          return error;
+     }
+#endif
 }
+
