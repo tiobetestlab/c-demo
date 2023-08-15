@@ -14,7 +14,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@32363-outside_pull_request
+      uses: tiobe/tics-github-action@main
       with:
         tmpDir: C:/Users/User/AppData/Roaming/tics2
         projectName: c-demo
