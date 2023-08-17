@@ -25,3 +25,4 @@ jobs:
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
         postAnnotations: true
+        filelist: .
