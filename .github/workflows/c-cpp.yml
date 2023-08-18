@@ -18,7 +18,7 @@ jobs:
       with:
         projectName: demo
         installTics: true
-        ticsConfiguration: http://192.168.1.11:666/experience/api/cfg?name=default
+        ticsConfiguration: http://192.168.1.11:20235/tiobeweb/TICS/api/cfg?name=default
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
