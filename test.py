@@ -10,3 +10,4 @@ def func2():
 def func3():
     ''' docstring '''
     return b
+print("trigger change")
