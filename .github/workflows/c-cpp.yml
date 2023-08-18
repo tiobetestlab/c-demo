@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   TiCS:
     name: TiCS
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
@@ -16,11 +16,9 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@main
       with:
-        tmpDir: C:/Users/User/AppData/Roaming/tics2
-        projectName: c-demo
+        projectName: demo
         installTics: true
-        filelist: .
-        ticsConfiguration: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
+        ticsConfiguration: http://192.168.1.11:666/experience/api/cfg?name=default
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
