@@ -14,7 +14,7 @@ extern void MMI_KL15Change_Callback(void);
 /* DATA DEFINITION */
 /*******************/
 static uint16   EngineSpeed	    = 5000u;
-static int8     EngineTemp      = 80u;
+static int8     EngineTemp      = 666u;
 static t_Engine EngineStruct    = {5000u, 80u};
 static uint16   XmsnOutputSpeed = 3000u;
 static uint16   XmsnInputSpeed  = 5000u;
