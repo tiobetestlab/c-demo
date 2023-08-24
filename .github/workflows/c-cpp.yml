@@ -11,8 +11,8 @@ jobs:
       uses: actions/checkout@v3    
     - name: make all
       run: make all
-    - name: dump env settings
-      run: printenv
+    - name: Create filelist
+      run: echo './dRTE/drte.c' >> ./custom_changedfiles.txt
     - name: TICS Action Run
       uses: tiobe/tics-github-action@32671-add_rulehelp
       with:
@@ -25,3 +25,4 @@ jobs:
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         pullRequestApproval: false
         postAnnotations: true
+        filelist: ./custom_changedfiles.txt
