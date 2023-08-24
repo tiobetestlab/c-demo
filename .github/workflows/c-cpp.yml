@@ -14,7 +14,7 @@ jobs:
     - name: Create filelist
       run: echo './dRTE/drte.c' >> ./custom_changedfiles.txt
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@32671-add_rulehelp
+      uses: tiobe/tics-github-action@v2
       with:
         projectName: c-demo
         installTics: true
