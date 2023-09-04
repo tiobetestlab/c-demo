@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   TiCS:
     name: TiCS
-    runs-on: ubuntu-latest
+    runs-on: janus
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
@@ -19,8 +19,7 @@ jobs:
         tmpDir: C:/Users/User/AppData/Roaming/ticser
         projectName: auto
         installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
+        ticsConfiguration: 'http://192.168.1.11:20235/tiobeweb/TICS/api/cfg?name=newconfig'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         postAnnotations: true
         postToConversation: true
