@@ -1,6 +1,6 @@
 name: TiCS
 
-on: push
+on: pull_request
 
 jobs:
   TiCS:
@@ -16,7 +16,7 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@v2.10.0
       with:
-        tmpDir: C:/Users/User/AppData/Roaming/tics2
+        tmpDir: C:/Users/User/AppData/Roaming/ticser
         projectName: c-demo
         installTics: true
         ticsConfiguration: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
