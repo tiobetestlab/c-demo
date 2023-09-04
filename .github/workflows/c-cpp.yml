@@ -17,7 +17,7 @@ jobs:
       uses: tiobe/tics-github-action@v2.10.0
       with:
         tmpDir: C:/Users/User/AppData/Roaming/ticser
-        projectName: c-demo
+        projectName: auto
         installTics: true
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         githubToken: ${{secrets.GITHUB_TOKEN}}
