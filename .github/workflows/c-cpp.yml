@@ -14,12 +14,11 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@32363-outside_pull_request
+      uses: tiobe/tics-github-action@v2.10.0
       with:
         tmpDir: C:/Users/User/AppData/Roaming/tics2
         projectName: c-demo
         installTics: true
-        filelist: .
         ticsConfiguration: https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab
         githubToken: ${{secrets.GITHUB_TOKEN}}
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
