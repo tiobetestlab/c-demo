@@ -23,3 +23,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
+        tmpDir: /home/tester/tmps/
