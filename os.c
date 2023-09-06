@@ -5,6 +5,13 @@ include guard */
 //#include "std_types.h"
 //Comment to create a pull request
 
+/* Introduced violations */
+static uint16   Violation1      = 5000u;
+static uint16   Violation2      = 5000u;
+static uint16   Violation3      = 5000u;
+static uint16   Violation4      = 5000u;
+static uint16   Violation5      = 5000u;
+
 extern const t_dRteEvent taskTable_TASK[];
 extern void drteRunnableExec(t_dRteEvent runnableFunc[], t_drte_event event);
 void task(void);
