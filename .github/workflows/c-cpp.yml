@@ -18,7 +18,7 @@ jobs:
       with:
         projectname: auto
         installTics: true
-        ticsConfiguration: 'http://192.168.1.11:20235/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:20235/tiobeweb/TICS/api/cfg?name=newerconfig'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
