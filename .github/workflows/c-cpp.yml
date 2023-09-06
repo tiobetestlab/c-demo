@@ -18,7 +18,6 @@ jobs:
       with:
         projectname: auto
         installTics: true
-        filelist: filelister.txt
         ticsConfiguration: 'http://192.168.1.11:21233/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
