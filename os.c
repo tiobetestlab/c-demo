@@ -11,6 +11,7 @@ static uint16   Violation2      = 5000u;
 static uint16   Violation3      = 5000u;
 static uint16   Violation4      = 5000u;
 static uint16   Violation5      = 5000u;
+static uint16   Violation6      = 5000u;
 
 extern const t_dRteEvent taskTable_TASK[];
 extern void drteRunnableExec(t_dRteEvent runnableFunc[], t_drte_event event);
