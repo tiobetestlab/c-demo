@@ -1,6 +1,6 @@
 test.py
 os.c
 test_component.c
-std_types.h
-drte_os.c
-drte_runtime.c
+./Inc/std_types.h
+./dRTE/drte_os.c
+./dRTE/drte_runtime.c
