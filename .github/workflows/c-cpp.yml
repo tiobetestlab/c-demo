@@ -16,9 +16,9 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@32831-multi_project
       with:
-        projectname: auto
+        projectname: 32274
         installTics: true
-        ticsConfiguration: 'http://192.168.1.11:32820/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:32274/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
