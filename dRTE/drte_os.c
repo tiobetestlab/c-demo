@@ -26,7 +26,7 @@ stdReturnType ClrEvent(uint8 task, t_drte_event event)
 	enabledEvents &= ~event;
 	//printf("\nCLR_EVENT: %d | %d\n", enabledEvents, event);
 
-	return 1;
+	return 999;
 }
 
 void GetEvent(uint8 task, uint32* event)
