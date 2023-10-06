@@ -14,12 +14,12 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@32831-multi_project
+      uses: tiobe/tics-github-action@v2.10.0
       with:
-        projectname: 32274
+        projectname: demo
         installTics: true
         calc: 'LOC'
-        ticsConfiguration: 'http://192.168.1.11:32275/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:81/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
