@@ -16,9 +16,9 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@32943-retry_mechanism
       with:
-        projectname: demo
+        projectname: c-demo
         installTics: true
-        calc: 'LOC'
+        calc: LOC
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
