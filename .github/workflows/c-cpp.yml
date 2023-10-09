@@ -20,7 +20,7 @@ jobs:
         installTics: true
         calc: LOC
         ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=default'
+        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
