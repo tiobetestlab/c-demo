@@ -19,7 +19,7 @@ jobs:
         projectname: c-demo
         installTics: true
         calc: LOC
-        ticsConfiguration: 'http://192.168.1.11:80/tiobeweb/testlab/api/cfg?name=testlab'
+        ticsConfiguration: 'http://192.168.1.11:80/tiobeweb/TICS/api/cfg?name=testlab'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
