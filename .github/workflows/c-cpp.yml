@@ -14,7 +14,7 @@ jobs:
     - name: dump env settings
       run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@32943-retry_mechanism
+      uses: tiobe/tics-github-action@v2.10.0
       with:
         projectname: demo
         installTics: true
