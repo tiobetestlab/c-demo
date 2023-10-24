@@ -1,28 +1,27 @@
 name: TiCS
 
-on: [pull_request]
+on: pull_request
 
 jobs:
   TiCS:
     name: TiCS
-    runs-on: ubuntu-latest
+    runs-on: janus
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
-    - name: make all
-      run: make all
-    - name: Create filelist
-      run: echo './dRTE/drte.c' >> ./custom_changedfiles.txt
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@33012-retry_proxy
       with:
-        projectName: c-demo
+        projectname: 33012
+        clientData: 'hello'
         installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-        tmpDir: '/tmp/c-demo'
-        calc: 'GATE'
+        calc: LOC,CS
+        ticsConfiguration: 'http://192.168.1.11:20236/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
-        pullRequestApproval: false
-        postAnnotations: false
-        postToConversation: false
+        postAnnotations: true
+        postToConversation: true
+        trustStrategy: self-signed
+        hostnameVerification: 0
+      env:
+        http_proxy: http://192.168.1.11:81
+        https_proxy: http://192.168.1.11:81
