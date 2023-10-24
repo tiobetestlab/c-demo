@@ -13,7 +13,7 @@ jobs:
       uses: tiobe/tics-github-action@v2.10.0
       with:
         projectname: 33012
-        clientData: 'hello'
+        clientData: 'hello1'
         installTics: true
         calc: LOC,CS
         ticsConfiguration: 'https://192.168.1.11:80/tiobeweb/TICS/api/cfg?name=default'
