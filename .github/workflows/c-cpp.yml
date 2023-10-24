@@ -21,3 +21,4 @@ jobs:
         postAnnotations: true
         postToConversation: true
         trustStrategy: self-signed
+        hostnameVerification: 0
