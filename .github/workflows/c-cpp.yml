@@ -9,17 +9,16 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
-    - name: make all
-      run: make all
-    - name: dump env settings
-      run: printenv
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@32831-multi_project
+      uses: tiobe/tics-github-action@v2.10.0
       with:
-        projectname: auto
+        projectname: 33012
+        clientData: 'hello'
         installTics: true
-        filelist: filelister.txt
-        ticsConfiguration: 'http://192.168.1.11:21233/tiobeweb/TICS/api/cfg?name=default'
+        calc: LOC,CS
+        ticsConfiguration: 'https://192.168.1.11:80/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
+        trustStrategy: self-signed
+        hostnameVerification: 0
