@@ -5,18 +5,18 @@ on: pull_request
 jobs:
   TiCS:
     name: TiCS
-    runs-on: centos8
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
       uses: tiobe/tics-github-action@v2.10.0
       with:
-        projectname: 32995-centos8
+        projectname: 33012
         clientData: 'hello'
         installTics: true
-        calc: LOC
-        ticsConfiguration: 'http://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
+        calc: LOC,CS
+        ticsConfiguration: 'http://192.168.1.11:20236/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
