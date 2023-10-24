@@ -22,6 +22,3 @@ jobs:
         postToConversation: true
         trustStrategy: self-signed
         hostnameVerification: 0
-      env:
-        http_proxy: http://192.168.1.11:81
-        https_proxy: http://192.168.1.11:81
