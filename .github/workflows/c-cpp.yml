@@ -16,11 +16,11 @@ jobs:
         clientData: 'hello'
         installTics: true
         calc: LOC,CS
-        ticsConfiguration: 'http://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'https://192.168.1.11:80/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
         hostnameVerification: 0
         trustStrategy: self-signed
-        tmpDir: /home/tester/tmps/firebird-port-block-after
+        tmpDir: /home/tester/tmps/32455-before
         additionalFlags: -log 1000000
