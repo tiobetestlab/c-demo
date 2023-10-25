@@ -22,5 +22,5 @@ jobs:
         postToConversation: true
         hostnameVerification: 0
         trustStrategy: self-signed
-        tmpDir: /home/tester/tmps/32455-after-49789
+        tmpDir: /home/tester/tmps/32455-after-49793
         additionalFlags: -log 1000000
