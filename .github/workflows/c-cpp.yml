@@ -22,5 +22,5 @@ jobs:
         postToConversation: true
         hostnameVerification: 0
         trustStrategy: self-signed
-        tmpDir: /home/tester/tmps/firebird-port-block
+        tmpDir: /home/tester/tmps/firebird-port-block-after
         additionalFlags: -log 1000000
