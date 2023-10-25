@@ -22,3 +22,4 @@ jobs:
         postToConversation: true
         hostnameVerification: 0
         trustStrategy: self-signed
+        tmpDir: ~/tmps/firebird-port-block
