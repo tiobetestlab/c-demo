@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2.11.0
+      uses: tiobe/tics-github-action@33012-retry_proxy
       with:
         projectname: apitest
         clientData: 'hello'
@@ -22,7 +22,7 @@ jobs:
         postToConversation: true
         trustStrategy: self-signed
         hostnameVerification: 0
-      env:
-        http_proxy: http://192.168.1.11:81
-        https_proxy: http://192.168.1.11:81
-        #no_proxy: 192.168.1.11
+      # env:
+      #   http_proxy: http://192.168.1.11:81
+      #   https_proxy: http://192.168.1.11:81
+      #   #no_proxy: 192.168.1.11
