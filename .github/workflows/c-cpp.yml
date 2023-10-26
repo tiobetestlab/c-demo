@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@33012-retry_proxy
+      uses: tiobe/tics-github-action@main
       with:
         projectname: apitest
         clientData: 'hello'
