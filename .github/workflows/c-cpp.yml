@@ -22,7 +22,7 @@ jobs:
         postToConversation: true
         trustStrategy: self-signed
         hostnameVerification: 0
-        tmpdir: /home/tester/tmps/32455-before-manual-nginx.zip
+        tmpdir: /home/tester/tmps/32455-after-manual-nginx.zip
         additionalFlags: -log 1000000
       # env:
       #   http_proxy: http://192.168.1.11:81
