@@ -22,7 +22,7 @@ jobs:
         postToConversation: true
         # trustStrategy: self-signed
         # hostnameVerification: 0
-        tmpdir: /home/tester/tmps/33077-after
+        tmpdir: /home/tester/tmps/33077-after-2
         # additionalFlags: -log 1000000
       # env:
       #   http_proxy: http://192.168.1.11:81
