@@ -10,19 +10,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@33077-tmpdir_missing
+      uses: tiobe/tics-github-action@v2.11.1
       with:
         projectname: demo
         clientData: 'testtoken'
         installTics: true
         calc: LOC,CS
-        ticsConfiguration: 'http://192.168.1.11:80/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
         # trustStrategy: self-signed
         # hostnameVerification: 0
-        tmpdir: /home/tester/tmps/33077-after-2
+        tmpdir: /home/tester/tmps/33139
         # additionalFlags: -log 1000000
       # env:
       #   http_proxy: http://192.168.1.11:81
