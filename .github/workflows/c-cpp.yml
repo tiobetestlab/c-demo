@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Install TICSQSERVER
       run: |
-        . <(curl --silent --show-error "https://eboit.tiobe.com/tiobeweb/TICS/api/public/v1/fapi/installtics/Script?cfg=main&platform=linux&url=https://eboit.tiobe.com/tiobeweb/TICS/")
+        . <(curl --silent --show-error "http://192.168.1.11:20233/tiobeweb/TICS/api/public/v1/fapi/installtics/Script?cfg=default&platform=linux&url=http://192.168.1.11:20233/tiobeweb/TICS/")
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
