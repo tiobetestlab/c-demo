@@ -10,17 +10,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2.10.0
+      uses: tiobe/tics-github-action@v2.11.1
       with:
-        projectname: apitest
+        projectname: demo
         clientData: 'hello'
         installTics: true
         calc: LOC,CS
-        ticsConfiguration: 'https://192.168.1.11:80/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'https://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
-        hostnameVerification: 0
-        trustStrategy: self-signed
-        tmpDir: /home/tester/tmps/32455-after-49794
-        additionalFlags: -log 1000000
+        # hostnameVerification: 0
+        # trustStrategy: self-signed
+        tmpDir: /home/tester/tmps/33125-before
+        # additionalFlags: -log 1000000
