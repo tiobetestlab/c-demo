@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@33125-large_changed_files
+      uses: tiobe/tics-github-action@v2.11.1
       with:
         projectname: demo
         clientData: 'hello'
