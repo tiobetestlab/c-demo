@@ -10,11 +10,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@33125-large_changed_files
+      uses: tiobe/tics-github-action@v2.11.2
       with:
         projectname: demo
         clientData: 'hello'
-        installTics: true
+        installTics: false
         calc: LOC,CS
         #filelist: filelist.txt
         ticsConfiguration: 'http://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
@@ -23,5 +23,5 @@ jobs:
         postToConversation: true
         # hostnameVerification: 0
         # trustStrategy: self-signed
-        tmpDir: /home/tester/tmps/33125-after
+        tmpDir: /home/tester/tmps/33188-before
         # additionalFlags: -log 1000000
