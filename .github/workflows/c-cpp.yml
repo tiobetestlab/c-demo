@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@33235-better_retry_logging
+      uses: tiobe/tics-github-action@v2.11.3
       with:
         projectname: demo
         clientData: 'try'
