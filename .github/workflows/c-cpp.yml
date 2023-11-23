@@ -24,5 +24,4 @@ jobs:
         # hostnameVerification: 0
         # trustStrategy: self-signed
         tmpDir: /home/tester/tmps/33235-before
-        retryCodes: 500,502
         # additionalFlags: -log 1000000
