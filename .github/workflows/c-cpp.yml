@@ -34,3 +34,4 @@ jobs:
         postAnnotations: false
         postToConversation: false
         hostnameVerification: false
+        trustStrategy: all
