@@ -7,7 +7,7 @@ jobs:
     name: TiCS
     runs-on: self-hosted
     container:
-      image: continuul/build-essential
+      image: ubuntu:22.04
     steps:
     - name: Build Env
       run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs
