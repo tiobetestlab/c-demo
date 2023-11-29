@@ -33,3 +33,4 @@ jobs:
         pullRequestApproval: false
         postAnnotations: false
         postToConversation: false
+        hostnameVerification: false
