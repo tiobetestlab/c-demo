@@ -22,7 +22,7 @@ static uint16   XmsnDrumSpeed	= 4000u;
 static uint8    CurrentGear     = 2u;
 static uint8    TargetGear      = 3u;
 static uint8    KL15		    = 0u;
-static uint8    KL50		    = 0u;
+static uint8    KL50		    = 666u;
 
 /*******************/
 /* PORT DEFINITION */
