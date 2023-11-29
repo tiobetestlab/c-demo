@@ -21,17 +21,4 @@ jobs:
     - name: Create filelist
       run: echo './dRTE/drte.c' >> ./custom_changedfiles.txt
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2
-      with:
-        projectName: c-demo
-        installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab/api/cfg?name=testlab'
-        tmpDir: '/tmp/c-demo'
-        calc: 'GATE'
-        githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: ${{secrets.TICSAUTHTOKEN}}
-        pullRequestApproval: false
-        postAnnotations: false
-        postToConversation: false
-        hostnameVerification: false
-        trustStrategy: all
+      run: . <(curl -k --silent --show-error "https://testlab.tiobe.com/tiobeweb/testlab/api/public/v1/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab/")
