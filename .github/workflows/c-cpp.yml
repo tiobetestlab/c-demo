@@ -22,3 +22,5 @@ jobs:
       run: echo './dRTE/drte.c' >> ./custom_changedfiles.txt
     - name: TICS Action Run
       run: . <(curl -k --silent --show-error "https://testlab.tiobe.com/tiobeweb/testlab/api/public/v1/fapi/installtics/Script?cfg=testlab&platform=linux&url=https://testlab.tiobe.com/tiobeweb/testlab/")
+    - name: TICS Action Run
+      run: TICS -version
