@@ -12,7 +12,7 @@ jobs:
       image: ubuntu:22.04
     steps:
     - name: Build Env
-      run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs
+      run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
     - name: Checkout
       uses: actions/checkout@v3
     - name: make all
