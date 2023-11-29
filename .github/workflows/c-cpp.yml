@@ -8,6 +8,7 @@ jobs:
     runs-on: self-hosted
     env:
       GIT_SSL_NO_VERIFY: 1
+      TICSHOSTNAMEVERIFICATION: 0
     container:
       image: ubuntu:22.04
     steps:
