@@ -5,7 +5,7 @@ on: [pull_request]
 jobs:
   TiCS:
     name: TiCS
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: Build Env
       run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
