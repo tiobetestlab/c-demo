@@ -7,8 +7,8 @@ jobs:
     name: TiCS
     runs-on: ubuntu-latest
     steps:
-    - name: Build Env
-      run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
+    #- name: Build Env
+    #  run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
     - name: Checkout
       uses: actions/checkout@v3
     - name: make all
