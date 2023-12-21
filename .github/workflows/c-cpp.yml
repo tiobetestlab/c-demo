@@ -6,14 +6,6 @@ jobs:
   TiCS:
     name: TiCS
     runs-on: self-hosted
-    env:
-      GIT_SSL_NO_VERIFY: 1
-      TICSHOSTNAMEVERIFICATION: 0
-    container:
-      image: ubuntu:22.04
-    defaults:
-      run:
-        shell: bash
     steps:
     - name: Build Env
       run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
@@ -30,5 +22,5 @@ jobs:
         tmpDir: '/tmp/c-demo'
         recalc: 'CW,CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: MzlmNGMyYjMtMjU1OS00NjA4LTk5YmMtOGI2ZGEzY2I5N2Q2OlojZCxwdlE+IVV6RWRnZg
+        ticsAuthToken: MzY4MWQ2MmQtYmY1Yy00M2RmLWExNjEtZWRjYTFjMjQ0ZDcwOjA4NERrU0IjaGBhW2tgPA
         pullRequestApproval: false
