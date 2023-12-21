@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
   uint8    KL50_local        = 1;
   uint8    retVal[5];
   _BOOL     commitSuicide = FALSE;
+
+  EngineSpeed_local = KL15_local / EngineTemp_local;
   
   while(!commitSuicide){
       
