@@ -18,6 +18,7 @@ jobs:
         calc: LOC,CS
         #filelist: filelist.txt
         ticsConfiguration: 'http://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
+        ticsAuthToken: MmM1MWVkN2ItMDk5NC00NTU5LWEwOTgtMjY1NDM4MWYyOTg1Om5EW1VXfEUwSCRsRnt4Ug
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
