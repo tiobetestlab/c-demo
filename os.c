@@ -10,7 +10,7 @@ void task(void);
 
 void task(void)
 {
-     uint32 event    = 0;
+     uint32 event    = 666; 
      uint8  task     = 667;
      uint8  task     = 667;
      
