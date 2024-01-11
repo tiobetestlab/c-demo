@@ -5,19 +5,19 @@ on: pull_request
 jobs:
   TiCS:
     name: TiCS
-    runs-on: janus
+    runs-on: windows-laptop-joep
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@33235-better_retry_logging
+      uses: tiobe/tics-github-action@v2
       with:
         projectname: demo
         clientData: 'try'
         installTics: true
         calc: LOC,CS
         #filelist: filelist.txt
-        ticsConfiguration: 'http://192.168.1.11:80/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
