@@ -38,6 +38,10 @@ int main(int argc, char *argv[])
       /* Introduce violations */
       retVal[5] = dRTE_Write_Engine_EngineSpeed_uint16(EngineSpeed_local);
       retVal[6] = dRTE_Read_Engine_EngineSpeed_uint16(&EngineSpeed_local);    
+
+      /* Introduce violations */
+      retVal[7] = dRTE_Write_Engine_EngineSpeed_uint16(EngineSpeed_local);
+      retVal[8] = dRTE_Read_Engine_EngineSpeed_uint16(&EngineSpeed_local);    
     
       /* Enable runnables */
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
@@ -50,6 +54,8 @@ int main(int argc, char *argv[])
       task();
       
       EngineTemp_local = 80;
+      dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
+      task();
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
       task();
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
