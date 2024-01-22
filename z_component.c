@@ -52,6 +52,8 @@ int main(int argc, char *argv[])
       EngineTemp_local = 80;
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
       task();
+      dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
+      task();
       
       task();
       
