@@ -12,15 +12,16 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@v2
       with:
-        projectname: demo
-        clientData: 'try'
+        projectname: c-demo
+        clientData: 'test'
         installTics: true
         calc: LOC,CS
         #filelist: filelist.txt
-        ticsConfiguration: 'http://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:20234/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
+        ticsAuthToken: "NmM0Njc5OGMtZmIxYy00OWY3LWFmZWQtZTlkMjJjYmQ1ZGFhOn1JWHljRz4ya2A4XTIvPQ"
         # hostnameVerification: 0
         # trustStrategy: self-signed
         tmpDir: /home/tester/tmps/33235-before
