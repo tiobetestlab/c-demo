@@ -12,7 +12,7 @@ jobs:
     - name: TICS Action Run
       uses: tiobe/tics-github-action@33270-soak_time
       with:
-        projectname: 33270-verif
+        projectname: both-states
         clientData: 'test'
         installTics: true
         calc: LOC,CS
