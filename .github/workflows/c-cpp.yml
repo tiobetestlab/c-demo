@@ -5,14 +5,14 @@ on: pull_request
 jobs:
   TiCS:
     name: TiCS
-    runs-on: janus_downl
+    runs-on: janus_d
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
       uses: tiobe/tics-github-action@33270-soak_time
       with:
-        projectname: c-demo
+        projectname: 33270-verif
         clientData: 'test'
         installTics: true
         calc: LOC,CS
@@ -24,5 +24,5 @@ jobs:
         ticsAuthToken: "NmM0Njc5OGMtZmIxYy00OWY3LWFmZWQtZTlkMjJjYmQ1ZGFhOn1JWHljRz4ya2A4XTIvPQ"
         # hostnameVerification: 0
         # trustStrategy: self-signed
-        tmpDir: /home/tester/tmps/33235-before
+        tmpDir: /home/tester/tmps/33270-after
         # additionalFlags: -log 1000000
