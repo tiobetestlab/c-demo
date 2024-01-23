@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   TiCS:
     name: TiCS
-    runs-on: janus_downloads
+    runs-on: janus_downl
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
