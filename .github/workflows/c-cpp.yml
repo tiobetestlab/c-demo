@@ -5,23 +5,23 @@ on: pull_request
 jobs:
   TiCS:
     name: TiCS
-    runs-on: janus_d
+    runs-on: janus_downloads
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
       uses: tiobe/tics-github-action@33270-soak_time
       with:
-        projectname: both-states
+        projectname: c-demo
         clientData: 'test'
         installTics: true
         calc: LOC,CS
         #filelist: filelist.txt
-        ticsConfiguration: 'http://192.168.1.11:20234/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:33270/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
-        ticsAuthToken: "NmM0Njc5OGMtZmIxYy00OWY3LWFmZWQtZTlkMjJjYmQ1ZGFhOn1JWHljRz4ya2A4XTIvPQ"
+        ticsAuthToken: ""
         # hostnameVerification: 0
         # trustStrategy: self-signed
         tmpDir: /home/tester/tmps/33270-after
