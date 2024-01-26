@@ -34,10 +34,12 @@ int main(int argc, char *argv[])
       /* Write engine speed unchanged */
       retVal[3] = dRTE_Write_Engine_EngineSpeed_uint16(EngineSpeed_local);
       retVal[4] = dRTE_Read_Engine_EngineSpeed_uint16(&EngineSpeed_local);    
-      /* Enable runnables */
+
+    /* Enable runnables */
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
       dRTE_Write_MMI_KL15_uint8(KL15_local);
       dRTE_Write_MMI_KL50_uint8(KL50_local);
+      dRTE_Write_MMI_KL52_uint8(KL52_local);
 
       /* Execute runnables in task */
       task();
