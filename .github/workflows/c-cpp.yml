@@ -21,7 +21,7 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
-        ticsAuthToken: ""
+        ticsAuthToken: "MmZmZjU1MTMtMjI1Yy00OGNiLTg1OWYtMGYxYzMxODAxMmExOmlMLHRqej5FKmsqd0RJYw"
         # hostnameVerification: 0
         # trustStrategy: self-signed
         tmpDir: /home/tester/tmps/33270-after
