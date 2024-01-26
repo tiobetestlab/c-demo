@@ -50,12 +50,6 @@ int main(int argc, char *argv[])
       EngineTemp_local = 80;
       dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
       task();
-      dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
-      task();
-      dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
-      task();
-      dRTE_Write_Engine_EngineTemp_uint8(EngineTemp_local);
-      task();
       
       task();
       
@@ -66,7 +60,6 @@ int main(int argc, char *argv[])
       (void)dRTE_Write_Engine_EngineStruct(EngineStruct);
       EngineStruct.engineSpeed = 0;
       EngineStruct.engineTemp  = 0;
-      (void)dRTE_Read_Engine_EngineStruct(&EngineStruct);
       (void)dRTE_Read_Engine_EngineStruct(&EngineStruct);
       
       commitSuicide = TRUE;
