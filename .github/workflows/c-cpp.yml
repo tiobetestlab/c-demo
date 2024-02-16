@@ -12,9 +12,10 @@ jobs:
       - name: make all
         run: make all
       - name: TICS Client
-        uses: tiobe/tics-github-action@v2
+        uses: tiobe/tics-github-action@33663-blocking_after_annotations
         with:
           projectName: c-demo
+          recalc: GATE
           ticsConfiguration: http://192.168.1.156/tiobeweb/TICS/api/cfg?name=default
           githubToken: ${{secrets.GITHUB_TOKEN}}
           ticsAuthToken: MzY4MWQ2MmQtYmY1Yy00M2RmLWExNjEtZWRjYTFjMjQ0ZDcwOjA4NERrU0IjaGBhW2tgPA
