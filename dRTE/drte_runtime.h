@@ -19,6 +19,7 @@
 #define DRTE_SET_EVENT(task, event) SetEvent(task, event)
 #define DRTE_GET_EVENT(task, event) GetEvent(task, event)
 #define DRTE_CLR_EVENT(task, event) ClrEvent(task, event)
+#define DRTE_CLRS_EVENT(task, event) ClrEvent(task, event)
 
 
 /* Default port layout */
