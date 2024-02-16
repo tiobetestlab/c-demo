@@ -5,23 +5,19 @@ on: [pull_request]
 jobs:
   TiCS:
     name: TiCS
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, luuk]
     steps:
-    #- name: Build Env
-    #  run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: make all
-      run: make all
-    - name: TICS Client
-      uses: tiobe/tics-github-action@v2
-      with:
-        projectName: c-demo
-        installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab2/api/cfg?name=default'
-        tmpDir: '/tmp/c-demo'
-        recalc: 'CW,CS'
-        githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: MzY4MWQ2MmQtYmY1Yy00M2RmLWExNjEtZWRjYTFjMjQ0ZDcwOjA4NERrU0IjaGBhW2tgPA
-        pullRequestApproval: false
-        postAnnotations: true
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: make all
+        run: make all
+      - name: TICS Client
+        uses: tiobe/tics-github-action@33663-blocking_after_annotations
+        with:
+          projectName: c-demo
+          recalc: GATE
+          calc: "CS"
+          ticsConfiguration: http://192.168.1.156/tiobeweb/TICS/api/cfg?name=default
+          githubToken: ${{secrets.GITHUB_TOKEN}}
+          ticsAuthToken: MzY4MWQ2MmQtYmY1Yy00M2RmLWExNjEtZWRjYTFjMjQ0ZDcwOjA4NERrU0IjaGBhW2tgPA
+          installTics: true
