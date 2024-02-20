@@ -22,6 +22,6 @@ jobs:
         tmpDir: '/home/tester/tmps/33663'
         recalc: 'CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: YzA4MzIyY2EtNzYzNy00MTA1LWEyNTAtN2RlZTg2MjhkYTBjOjUna11nQDdfZlJ7JDdPbA
+        ticsAuthToken: MmM1MWVkN2ItMDk5NC00NTU5LWEwOTgtMjY1NDM4MWYyOTg1Om5EW1VXfEUwSCRsRnt4Ug
         pullRequestApproval: false
         postAnnotations: true
