@@ -18,7 +18,7 @@ jobs:
       with:
         projectName: 33663-1
         installTics: true
-        ticsConfiguration: 'http://janus.tiobe.com/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://janus.tiobe.com:20241/tiobeweb/TICS/api/cfg?name=default'
         tmpDir: '/home/tester/tmps/33663'
         recalc: 'CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
