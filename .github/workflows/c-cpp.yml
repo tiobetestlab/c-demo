@@ -5,7 +5,7 @@ on: [pull_request]
 jobs:
   TiCS:
     name: TiCS
-    runs-on: ubuntu-latest
+    runs-on: janus
     steps:
     #- name: Build Env
     #  run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
@@ -14,14 +14,16 @@ jobs:
     - name: make all
       run: make all
     - name: TICS Client
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@33663-blocking_after_annotations
       with:
-        projectName: c-demo
+        projectName: wednesday
         installTics: true
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/testlab2/api/cfg?name=default'
-        tmpDir: '/tmp/c-demo'
-        recalc: 'CW,CS'
+        ticsConfiguration: 'http://janus.tiobe.com:20241/tiobeweb/TICS/api/cfg?name=default'
+        tmpDir: '/home/tester/tmps/33663-before'
+        recalc: 'CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: MzY4MWQ2MmQtYmY1Yy00M2RmLWExNjEtZWRjYTFjMjQ0ZDcwOjA4NERrU0IjaGBhW2tgPA
+        ticsAuthToken: MmM1MWVkN2ItMDk5NC00NTU5LWEwOTgtMjY1NDM4MWYyOTg1Om5EW1VXfEUwSCRsRnt4Ug
         pullRequestApproval: false
         postAnnotations: true
+        showBlockingAfter: true
+        
