@@ -48,6 +48,7 @@ int main(int argc, char *argv[])
       dRTE_Write_MMI_KL50_uint8(KL50_local);
       dRTE_Write_MMI_KL50_uint8(KL50_local);
       dRTE_Write_MMI_KL50_uint8(KL50_local);
+      dRTE_Write_MMI_KL50_uint8(KL50_local);
     
       /* Execute runnables in task */
       task();
