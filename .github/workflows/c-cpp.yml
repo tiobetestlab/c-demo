@@ -16,7 +16,7 @@ jobs:
     - name: TICS Client
       uses: tiobe/tics-github-action@33663-blocking_after_annotations
       with:
-        projectName: 33663-1
+        projectName: wednesday
         installTics: true
         ticsConfiguration: 'http://janus.tiobe.com:20241/tiobeweb/TICS/api/cfg?name=default'
         tmpDir: '/home/tester/tmps/33663'
