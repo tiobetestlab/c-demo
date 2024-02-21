@@ -16,12 +16,12 @@ jobs:
     - name: TICS Client
       uses: tiobe/tics-github-action@33663-blocking_after_annotations
       with:
-        projectName: demo
+        projectName: wednesday
         installTics: true
-        ticsConfiguration: 'http://janus.tiobe.com:33663/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://janus.tiobe.com:20241/tiobeweb/TICS/api/cfg?name=default'
         tmpDir: '/home/tester/tmps/33663-before'
         recalc: 'CS'
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        ticsAuthToken: MmU2NmVjOTEtNDA1MS00Y2I5LWJlZTYtZmVlOGZlNzMxMjc5Om93J2cnSTN4VkhxQTEhcg
+        ticsAuthToken: MmM1MWVkN2ItMDk5NC00NTU5LWEwOTgtMjY1NDM4MWYyOTg1Om5EW1VXfEUwSCRsRnt4Ug
         pullRequestApproval: false
         postAnnotations: true
