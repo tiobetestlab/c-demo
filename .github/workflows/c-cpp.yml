@@ -25,4 +25,4 @@ jobs:
         ticsAuthToken: MmM1MWVkN2ItMDk5NC00NTU5LWEwOTgtMjY1NDM4MWYyOTg1Om5EW1VXfEUwSCRsRnt4Ug
         pullRequestApproval: false
         postAnnotations: true
-  	    showBlockingAfter: false
+        showBlockingAfter: false
