@@ -19,6 +19,6 @@ jobs:
         projectName: c-demo
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/releasetest/api/cfg?name=default'
         ticsAuthToken: ${{ secrets.RELEASETESTTOKEN }}
-        githubToken: ${{ secrets.GITHUBTOKEN }}
+        githubToken: ${{secrets.GITHUB_TOKEN}}
         recalc: 'CW,CS'
         installTics: true
