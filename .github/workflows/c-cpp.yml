@@ -14,7 +14,7 @@ jobs:
     - name: make all
       run: make all
     - name: TICS Client
-      uses: tiobe/tics-github-action@v2
+      uses: tiobe/tics-github-action@33775-version_prefix
       with:
         projectName: c-demo
         ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/releasetest/api/cfg?name=default'
