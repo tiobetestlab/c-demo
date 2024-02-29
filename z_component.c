@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
       EngineStruct.engineSpeed = 6666;
       EngineStruct.engineTemp  = 128;
       (void)dRTE_Write_Engine_EngineStruct(EngineStruct);
+      EngineStruct.engineSpeed = 1;
       EngineStruct.engineSpeed = 0;
       EngineStruct.engineTemp  = 0;
       (void)dRTE_Read_Engine_EngineStruct(&EngineStruct);
