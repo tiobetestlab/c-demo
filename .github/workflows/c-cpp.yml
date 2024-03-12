@@ -6,19 +6,19 @@ jobs:
   TiCS:
     name: TiCS
     runs-on: janus
+    env:
+      TICSAUTHTOKEN: YTRiMGYwYjgtNTkwYy00ZmYwLWI5NWItOWY5YzZmZTVjNmY5Omgudi40bnR2Tz5GbC05Jw
     steps:
     - name: Checkout
       uses: actions/checkout@v3    
     - name: TICS Action Run
-      uses: tiobe/tics-github-action@v2.11.1
+      uses: tiobe/tics-github-action@v2
       with:
         projectname: demo
-        clientData: 'hello1'
+        clientData: 'hello'
         installTics: true
         calc: LOC,CS
-        ticsConfiguration: 'https://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'https://192.168.1.11:50502/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
-        trustStrategy: self-signed
-        hostnameVerification: 0
