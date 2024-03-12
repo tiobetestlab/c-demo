@@ -20,7 +20,7 @@ jobs:
         clientData: 'hello'
         installTics: true
         calc: LOC,CS
-        ticsConfiguration: 'https://192.168.1.11:50502/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:50502/tiobeweb/TICS/api/cfg?name=default'
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
