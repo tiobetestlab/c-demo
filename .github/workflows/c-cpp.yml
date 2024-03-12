@@ -6,8 +6,8 @@ jobs:
   TiCS:
     name: TiCS
     runs-on: janus
-    env:
-      TICSAUTHTOKEN: "YTRiMGYwYjgtNTkwYy00ZmYwLWI5NWItOWY5YzZmZTVjNmY5Omgudi40bnR2Tz5GbC05Jw"
+    #env:
+      #TICSAUTHTOKEN: "YTRiMGYwYjgtNTkwYy00ZmYwLWI5NWItOWY5YzZmZTVjNmY5Omgudi40bnR2Tz5GbC05Jw"
     steps:
     #- name: Build Env
     #  run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
@@ -24,3 +24,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         postAnnotations: true
         postToConversation: true
+        ticsAuthToken: YTRiMGYwYjgtNTkwYy00ZmYwLWI5NWItOWY5YzZmZTVjNmY5Omgudi40bnR2Tz5GbC05Jw
