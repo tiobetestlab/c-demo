@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Revision$ -->
+ <chapter xml:id="features.http-auth" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>HTTP authentication with PHP</title>
+
+  <simpara>
+   It is possible to use the 
+   <function>header</function> function to send an <literal>"Authentication Required"</literal> 
+   message to the client browser causing it to pop up a Username/Password 
+   input window.  Once the user has filled in a username and a password, 
+   the URL containing the PHP script will be called again with the 
+   <link linkend="reserved.variables">predefined variables</link> 
+   <varname>PHP_AUTH_USER</varname>, <varname>PHP_AUTH_PW</varname>, 
+   and <varname>AUTH_TYPE</varname> set to the user name, password and 
+   authentication type respectively.  These predefined variables are found 
+   in the <varname>$_SERVER</varname> array. <emphasis>Only</emphasis> "Basic" and "Digest"
+   authentication methods are supported. See the
+   <function>header</function> function for more information.
+  </simpara>
+
+  <para>
+   An example script fragment which would force client authentication
+   on a page is as follows:
+  </para>
+  <para>
+   <example>
+    <title>Basic HTTP Authentication example</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="My Realm"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo 'Text to send if user hits Cancel button';
+    exit;
+} else {
+    echo "<p>Hello {$_SERVER['PHP_AUTH_USER']}.</p>";
+    echo "<p>You entered {$_SERVER['PHP_AUTH_PW']} as your password.</p>";
+}
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+
+  <para>
+   <example>
+    <title>Digest HTTP Authentication example</title>
+    <para>
+     This example shows you how to implement a simple Digest HTTP
+     authentication script. For more information read the <link
+      xlink:href="&url.rfc;2617">RFC 2617</link>.
+    </para>
+    <programlisting role="php">
+<![CDATA[
+<?php
+$realm = 'Restricted area';
+
+//user => password
+$users = array('admin' => 'mypass', 'guest' => 'guest');
+
+
+if (empty($_SERVER['PHP_AUTH_DIGEST'])) {
+    header('HTTP/1.1 401 Unauthorized');
+    header('WWW-Authenticate: Digest realm="'.$realm.
+           '",qop="auth",nonce="'.uniqid().'",opaque="'.md5($realm).'"');
+
+    die('Text to send if user hits Cancel button');
+}
