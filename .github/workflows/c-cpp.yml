@@ -20,4 +20,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         #calc: 'GA'
         installTics: true
-        codetype: PRODUCTION,TESTCODE
+        #codetype: PRODUCTION,TESTCODE
