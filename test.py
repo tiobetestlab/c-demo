@@ -10,3 +10,11 @@ def func2():
 def func3():
     ''' docstring '''
     return b
+
+def func4():
+    ''' docstring '''
+    return b
+
+def func4():
+    ''' docstring '''
+    return b
