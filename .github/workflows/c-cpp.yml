@@ -12,7 +12,7 @@ jobs:
     - name: make all
       run: make all
     - name: TICS Client
-      uses: tiobe/tics-github-action@v2.12.1
+      uses: tiobe/tics-github-action@33446-checked_files_list
       with:
         projectName: 33446
         ticsConfiguration: 'http://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
