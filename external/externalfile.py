@@ -1,6 +1,6 @@
-''' docstring '''                                                                                                       
-def func():
-    pass
+''' docstring '''
+
+# Start of generated
 
 def func():
     pass
@@ -25,3 +25,5 @@ def func():
 
 def func():
     pass
+
+# End of generated
