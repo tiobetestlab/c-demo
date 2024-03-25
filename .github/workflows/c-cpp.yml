@@ -5,20 +5,19 @@ on: [pull_request, workflow_dispatch]
 jobs:
   TiCS:
     name: TiCS
-    runs-on: ubuntu-latest
+    runs-on: janus
     steps:
-    #- name: Build Env
-    #  run: apt update && apt install -y --no-install-recommends apt-utils build-essential sudo git nodejs curl
     - name: Checkout
       uses: actions/checkout@v3
     - name: make all
       run: make all
     - name: TICS Client
-      uses: tiobe/tics-github-action@v2.12.1
+      uses: tiobe/tics-github-action@33446-checked_files_list
       with:
-        projectName: c-demo
-        ticsConfiguration: 'https://testlab.tiobe.com/tiobeweb/releasetest/api/cfg?name=default'
-        ticsAuthToken: ${{ secrets.RELEASETESTTOKEN }}
+        projectName: 33446
+        ticsConfiguration: 'http://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
+        ticsAuthToken: MmM1MWVkN2ItMDk5NC00NTU5LWEwOTgtMjY1NDM4MWYyOTg1Om5EW1VXfEUwSCRsRnt4Ug
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        recalc: 'CW,CS'
+        #calc: 'GA'
         installTics: true
+        codetype: PRODUCTION,TESTCODE,EXTERNAL,GENERATED
