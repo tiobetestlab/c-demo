@@ -15,8 +15,8 @@ jobs:
       uses: tiobe/tics-github-action@33446-checked_files_list
       with:
         projectName: 33446
-        ticsConfiguration: 'http://192.168.1.11:20233/tiobeweb/TICS/api/cfg?name=default'
-        ticsAuthToken: MTE1ZDBlYTAtNzdjYi00NTY5LTljMmYtY2I2MmNmN2RkOWE2Omx7TkZcbixIck9NV0Y7OA
+        ticsConfiguration: 'http://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
+        ticsAuthToken: MmM1MWVkN2ItMDk5NC00NTU5LWEwOTgtMjY1NDM4MWYyOTg1Om5EW1VXfEUwSCRsRnt4Ug
         githubToken: ${{secrets.GITHUB_TOKEN}}
         #calc: 'GA'
         installTics: true
