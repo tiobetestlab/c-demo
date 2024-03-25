@@ -15,7 +15,7 @@ jobs:
       uses: tiobe/tics-github-action@v2.12.1
       with:
         projectName: 33446
-        ticsConfiguration: 'https://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
+        ticsConfiguration: 'http://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
         ticsAuthToken: MjRlZDBmYjQtNTY2Yi00MWQ4LTg3OWYtN2QxNGE5ZGRhMjY0OnpFZ1p7dzxXTm4yRHl9XQ
         githubToken: ${{secrets.GITHUB_TOKEN}}
         recalc: 'CS'
