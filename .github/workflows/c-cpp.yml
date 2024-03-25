@@ -18,6 +18,6 @@ jobs:
         ticsConfiguration: 'http://192.168.1.11:20241/tiobeweb/TICS/api/cfg?name=default'
         ticsAuthToken: MjRlZDBmYjQtNTY2Yi00MWQ4LTg3OWYtN2QxNGE5ZGRhMjY0OnpFZ1p7dzxXTm4yRHl9XQ
         githubToken: ${{secrets.GITHUB_TOKEN}}
-        recalc: 'CS'
+        #calc: 'GA'
         installTics: true
-        codetype: PRODUCTION
+        #codetype: PRODUCTION
