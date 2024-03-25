@@ -11,8 +11,8 @@ void task(void);
 
 void task(void)
 {
-     uint8 event = 667;
-     uint8 task  = 667;
+     uint8 event = 669;
+     uint8 task  = 669;
      
      DRTE_GET_EVENT(task, &event);
      DRTE_CLR_EVENT(task, event);
