@@ -26,4 +26,7 @@ def func():
 def func():
     pass
 
+def func():
+    pass
+
 # End of generated
