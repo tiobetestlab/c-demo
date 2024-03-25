@@ -20,4 +20,4 @@ jobs:
         githubToken: ${{secrets.GITHUB_TOKEN}}
         recalc: 'CS'
         installTics: true
-        codetype: PRODUCTION,TESTCODE,EXTERNAL,GENERATED
+        codetype: PRODUCTION
